@@ -1,0 +1,58 @@
+body {
+  background-image: url("pokeme.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: Courier New, monospace;
+}
+
+img{
+  width: 400px;
+  padding-left: 60px;
+  padding-top: 15px;
+}
+
+h1 span{
+  margin-left: 150px;
+  color: #ffde00;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  background: #cc0000;
+  border-radius: 10px;
+}
+
+button{
+  margin-left: 210px;
+  margin-top: 10px;
+  color:#cc0000;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-family: Courier New, monospace;
+  background: none;
+  border: 3px solid #ffde00;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-height: 834px) {
+  body{
+  background-size: 1717px;
+
+  }
+}
+
+button:hover
+{
+  border: 1px solid #cc0000;
+}
+
+a:link { text-decoration: none; color: #ffde00;}
+
+
+a:visited { text-decoration: none; color: #ffde00;}
+
+
+
+a:hover { text-decoration: none; color: #ffde00;}
+
+
+a:active { text-decoration: none; color: #ffde00;}

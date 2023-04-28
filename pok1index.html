@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">  
+  <title>PokeDex: Birthday</title>
+  <link rel="stylesheet" href="pok1style.css">
+</head>
+
+<body>
+  <div class="all">
+
+    <div class ="left">
+
+      <div class="year">
+        <form id ="formone">
+          <h1><span>What year were you born in?</span></h1>
+            <select id="year" name="year">
+              <option value="fire">2020-2023</option>
+              <option value="steel">2015-2020</option>
+              <option value="ghost">2010-2015</option>
+              <option value="water">2005-2010</option>
+              <option value="grass">2000-2005</option>
+              <option value="bug">1995-2000</option>
+              <option value="fairy">1990-1995</option>
+              <option value="ice">1985-1990</option>
+              <option value="poison">1980-1985</option>                  
+            </select>
+        </form>
+        <button id="submitone" onclick="clear()">Submit</button>
+      </div>
+
+      <br>
+
+      <div class="month">
+        <form id ="formtwo">
+          <h1><span>What month were you born in?</span></h1>
+            <select id="month" name="month">
+              <option value="poison">January</option>
+              <option value="bug">Febuary</option>
+              <option value="electric">March</option>
+              <option value="psychic">April</option>
+              <option value="dragon">May</option>
+              <option value="flying">June</option>
+              <option value="water">July</option>
+              <option value="dark">August</option>
+              <option value="fighting">September</option>
+              <option value="rock">October</option>
+              <option value="flying">November</option> 
+              <option value="ground">December</option>                      
+            </select>
+        </form>
+        <button id="submittwo" onclick="clear()">Submit</button>
+      </div>
+
+      <br>
+      <br>
+
+      <div class="finalbutton">
+        <button id="submitthree" onclick="clear()">Get Your Pokemon!</button>
+      </div>
+
+    </div>
+
+    <div class="right">
+
+      <h2>What Pokemon Are You?</h2>
+
+        <div class ="data">
+
+          <div id ="result1"><p2 id="result-typeone">Type One:</p2></div>
+          <div id ="result2"><p2 id="result-typetwo">Type Two:</p2></div>
+          <br><br><br>
+          <div id ="result3"><p2 id="poke-name">Name:</p2></div>
+          <br>
+          <div id ="result4"><p2 id="poke-weight">Weight:</p2></div>
+          <div id ="result5"><p2 id="poke-height">Height:</p2></div>
+          <div id ="result6"><p2 id="poke-ability">Abilities:</p2></div>
+          <div class = "images">
+            <div id ="result8"><img id="result-image" src="trans.png" width="170px"></div>
+            <div id ="result9"><img id="result-imageback" src="trans.png" width="170px"></div>
+          </div>
+
+        </div>
+
+    </div>
+
+    <br>
+
+  </div>
+
+<div id="readmore">
+  <p2 id="more"><a id="onemore" href="#" target="_blank">Read More About Your Pokemon!</a></p2>
+</div>
+
+
+<script src="pokemainscript.js"></script>
+
+</body>
+
+</html>
