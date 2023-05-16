@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">  
+  <title>Fridge Finder</title>
+  <link rel="stylesheet" href="foodstyle.css">
+</head>
+
+<body>
+
+  <div class="logo">
+    <img src="foodlogo.png" width="350px">
+    <p>GOT INGREDIANTS, NEED IDEAS?<p>
+  </div>
+
+  <br><br><br><br>
+
+  <div class="meal">
+    <form id ="bld">
+      <h3><span>What meal are you cooking for today?</span></h3>
+        <select id="time" name="time">
+          <option value="Breakfast">Breakfast</option>
+          <option value="Lunch">Lunch</option> 
+          <option value="Dinner">Dinner</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Drinks">Drinks</option>        
+        </select>
+    </form>
+    <button id="submitone" onclick="clear()">Submit</button>
+  </div>
+
+  <br>
+
+  <div id ="prompt1">
+    <p2 id="okay1"></p2>
+  </div>
+
+  <div class="container">
+
+    <div class ="first">
+      <label id="ingri1">Hello</label>
+      <p id="example1">Hello2</p>
+      <br>
+      <input type="text1" id="text1" name="ingri1">
+    </div>
+
+    <div class="center">
+
+      <div class ="second">
+        <label id="ingri2">Hello</label>
+        <p id="example2">Hello2</p>
+        <br>
+        <input type="text2" id="text2" name="ingri2">
+      </div>
+
+    </div>
+
+    <div class ="third">
+      <label id="ingri3">Hello</label>
+      <p id="example3">Hello2</p>
+      <br>
+      <input type="text3" id="text3" name="ingri3">
+    </div>
+
+  </div>
+
+  <div class="mainbutton">
+    <button id="submittwo">Find Receipes!</button>
+  </div>
+
+  <div class="recipecontainer">
+
+    <div class="firstrecipe" id="firstrecipe">
+      <p id="recipe1">Title</p>
+      <p id="recipe1time">Cooking time</p>
+      <p id="recipe1veg">Veg non veg</p>
+      <p id="recipe1calories">Calories</p>
+      <img src="#" id="recipe1img" with=250px>
+      <p id="recipe1link"><a id="r1link" href="#" target="_blank">Get Recipe!</a></p>
+    </div>
+
+    <div class="centerecipe">
+      <div class="secondrecipe" id="secondrecipe">
+        <p id="recipe2">Title</p>
+        <p id="recipe2time">Cooking time</p>
+        <p id="recipe2veg">Veg non veg</p>
+        <p id="recipe2calories">Calories</p>
+        <img src="#" id="recipe2img" with=250px>
+        <p id="recipe2link"><a id="r2link" href="#" target="_blank">Get Recipe!</a></p>
+      </div>
+    </div>
+
+    <div class="thirdrecipe" id="thirdrecipe">
+      <p id="recipe3">Title</p>
+      <p id="recipe3time">Cooking time</p>
+      <p id="recipe3veg">Veg non veg</p>
+      <p id="recipe3calories">Calories</p>
+      <img src="#" id="recipe3img" with=250px>
+      <p id="recipe3link"><a id="r3link" href="#" target="_blank">Get Recipe!</a></p>
+    </div>
+
+  </div>
+
+  <div class="ending">
+    <button id="end">Thank you for using Fridge Finder!</button>
+  </div>
+
+
+
+
+
+
+
+<!--       <label for="ingredients">What fruits and vegetables do you have:</label>
+        <select id="ingri1" name="ingri1">
+        </select>
+      <button id="submittwo" onclick="clear()">Submit</button>
+  </div>
+
+</div> -->
+
+  <script src="foodscript.js"></script>
+
+</body>
+</html>

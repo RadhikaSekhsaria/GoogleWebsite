@@ -1,0 +1,517 @@
+body {
+  background-image: url("foodbackg.png");
+  background-size: 105%;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+  display: block;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.logo p{
+  color: white;
+  letter-spacing: 5px;
+  font-size: 16px;
+}
+
+.meal h3{
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  width: 400px;
+  margin-left: 35%;
+}
+
+
+.meal select{
+  display: inline;
+  float: left;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border: 3px solid transparent;
+  font-size: 16px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  width: 250px;
+  margin-left: 35%;
+}
+
+.meal button{
+  display: inline;
+  float: right;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border: 3px solid transparent;
+  font-size: 16px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  width: 180px;
+  margin-right: 35.5%;
+}
+
+#prompt1 {
+  display: flex;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border: 3px solid transparent;
+  font-size: 18px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  line-height: 3vh;
+  width: 600px;
+  margin-left: 28%;
+  margin-top: 10%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28%;
+  text-align: center;
+}
+
+.first {
+  align-self: flex-start;
+}
+
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.second {
+  align-self: flex-start;
+}
+
+.third {
+  align-self: flex-end;
+}
+
+.first label{
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  border-radius: 10px 10px 0px 0px;
+  letter-spacing: 2px;
+  width: 300px;
+  margin-left: 20%;
+}
+
+.first p{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  border-radius: 0px 0px 10px 10px;
+  letter-spacing: 2px;
+  width: 320px;
+  margin-top: 0;
+  margin-left: 20%;
+}
+
+.first input{
+  display: inline;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border: 3px solid transparent;
+  font-size: 16px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  width: 300px;
+  margin-left: 20%;
+}
+
+.second label{
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  border-radius: 10px 10px 0px 0px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.second p{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  border-radius: 0px 0px 10px 10px;
+  letter-spacing: 2px;
+  width: 320px;
+  margin-top: 0;
+}
+
+.second input{
+  display: inline;
+  float: left;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border: 3px solid transparent;
+  font-size: 16px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.third label{
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  border-radius: 10px 10px 0px 0px;
+  letter-spacing: 2px;
+  width: 300px;
+  margin-left: -20%;
+}
+
+.third p{
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  border-radius: 0px 0px 10px 10px;
+  letter-spacing: 2px;
+  width: 320px;
+  margin-top: 0;
+  margin-left: -20%;
+}
+
+.third input{
+  display: inline;
+  float: left;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border: 3px solid transparent;
+  font-size: 16px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  width: 300px;
+  margin-left: -20%;
+}
+
+.mainbutton{
+  padding: 10% 10% 15% 10%;
+}
+
+.ending{
+  padding: 10% 10% 10% 10%;
+}
+
+.mainbutton button{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border: 3px solid transparent;
+  font-size: 18px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  width: 200px;
+  margin-left: 42.5%;
+}
+
+.ending button{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 20px;
+  border: 3px solid transparent;
+  font-size: 18px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  width: 400px;
+  margin-left: 35%;
+}
+
+.firstrecipe #recipe1{
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  border-radius: 10px 10px 0px 0px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.firstrecipe #recipe1time{
+  display: flex;
+  color: red;
+  flex-direction: column;
+  float: left;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 149px;
+  margin-top: -20px;
+}
+
+.firstrecipe #recipe1veg{
+  color: green;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 149px;
+  margin-top: -20px;
+}
+
+.firstrecipe #recipe1calories{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 20px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.firstrecipe img{
+  float: left;
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.firstrecipe #recipe1ingri{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.firstrecipe #recipe1link{
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  width: 300px;
+  border: 1px solid transparent;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.recipecontainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15%;
+  text-align: center;
+}
+
+.secondrecipe #recipe2{
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  border-radius: 10px 10px 0px 0px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.secondrecipe #recipe2time{
+  display: flex;
+  color: red;
+  flex-direction: column;
+  float: left;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 149px;
+  margin-top: -20px;
+}
+
+.secondrecipe #recipe2veg{
+  color: green;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 149px;
+  margin-top: -20px;
+}
+
+.secondrecipe #recipe2calories{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 20px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.secondrecipe img{
+  float: left;
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.secondrecipe #recipe2link{
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  width: 300px;
+  border: 1px solid transparent;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.thirdrecipe #recipe3{
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  border-radius: 10px 10px 0px 0px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.thirdrecipe #recipe3time{
+  display: flex;
+  color: red;
+  flex-direction: column;
+  float: left;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 149px;
+  margin-top: -20px;
+}
+
+.thirdrecipe #recipe3veg{
+  color: green;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  letter-spacing: 2px;
+  width: 149px;
+  margin-top: -20px;
+}
+
+.thirdrecipe #recipe3calories{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 20px;
+  border: 1px solid transparent;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.thirdrecipe img{
+  float: left;
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.thirdrecipe #recipe3ingri{
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  width: 300px;
+}
+
+.thirdrecipe #recipe3link{
+  text-align: center;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  width: 300px;
+  border: 1px solid transparent;
+  border-radius: 0px 0px 10px 10px;
+}
+
+
+.firstrecipe {
+  align-self: flex-start;
+}
+
+.centerrecipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondrecipe {
+  align-self: flex-start;
+}
+
+.thirdrecipe {
+  align-self: flex-end;
+}
+
+
+.meal button:hover {opacity: 80%;}
+.meal button:focus {opacity: 70%;}
+.meal button:active {opacity: 60%;}
+
+.mainbutton button:hover {opacity: 80%;}
+.mainbutton button:focus {opacity: 70%;}
+.mainbutton button:active {opacity: 60%;}
