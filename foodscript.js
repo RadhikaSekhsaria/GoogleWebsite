@@ -23,24 +23,11 @@ const recipe1calories = document.getElementById('recipe1calories');
 const recipe1img = document.getElementById('recipe1img');
 const recipe1link = document.getElementById('r1link');
 
-const recipe2Full = document.getElementById('secondrecipe');
-const recipe2name = document.getElementById('recipe2');
-const recipe2time = document.getElementById('recipe2time');
-const recipe2veg = document.getElementById('recipe2veg');
-const recipe2calories = document.getElementById('recipe2calories');
-const recipe2img = document.getElementById('recipe2img');
-const recipe2link = document.getElementById('r2link');
-
-const recipe3Full = document.getElementById('thirdrecipe');
-const recipe3name = document.getElementById('recipe3');
-const recipe3time = document.getElementById('recipe3time');
-const recipe3veg = document.getElementById('recipe3veg');
-const recipe3calories = document.getElementById('recipe3calories');
-const recipe3img = document.getElementById('recipe3img');
-const recipe3link = document.getElementById('r3link');
-
 const submit2Button = document.getElementById("submittwo");
 const ending = document.getElementById("end");
+const back = document.getElementById("goback");
+const next = document.getElementById("gonext");
+
 
 promptDiv.style.display = "none";
 label1Element.style.display = "none";
@@ -57,17 +44,20 @@ input3Element.style.display = "none";
 submit2Button.style.display = "none";
 
 recipe1Full.style.display = "none";
-recipe2Full.style.display = "none";
-recipe3Full.style.display = "none";
-
+back.style.display = "none";
+next.style.display = "none";
 ending.style.display = "none";
+
+// recipe2Full.style.display = "none";
+// recipe3Full.style.display = "none";
+
 
 document.cookie = "cookieName=cookieValue; SameSite=None; Secure";
 
 submitButton.addEventListener('click', () => {
 
   const selectedOption = dropdown.value;
-  promptText.textContent = "Perfect! To start making " + selectedOption + ", tell us the ingredinats you have in your fridge!";
+  promptText.textContent = "Perfect! To start making " + selectedOption + ", tell us the ingredinats you have in your fridge! Scroll Down";
   promptDiv.style.display = "block";
   label1Element.style.display = "block";
   example1Element.style.display = "block";
@@ -119,65 +109,95 @@ submitButton.addEventListener('click', () => {
 
 submit2Button.addEventListener('click', () => {
 
-  recipe1Full.style.display = "block";
-  recipe2Full.style.display = "block";
-  recipe3Full.style.display = "block";
+  // recipe2Full.style.display = "block";
+  // recipe3Full.style.display = "block";
   ending.style.display = "block";
+  back.style.display = "block";
+  recipe1Full.style.display = "block";
+  next.style.display = "block";
 
   const result1 = input1Element.value;
   const result2 = input2Element.value;
   const result3 = input3Element.value;
 
 
-  fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=' +result1+ ',+' +result2 + ',+' +result3 + '.value&number=5&apiKey=4a7b0e81a4174698a674913026409243')
-  // fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=apple,+flour,+sugar&number=2&apiKey=4a7b0e81a4174698a674913026409243')
-    .then(response => response.json())
-    .then(data => {
 
-      const recipeInfo = data[0];
+fetch('https://api.spoonacular.com/recipes/findByIngredients?ingredients=' + result1 + ',' + result2 + ',' + result3 + '&number=10&apiKey=4a7b0e81a4174698a674913026409243')
+  .then(response => response.json())
+  .then(data => {
+
+    document.cookie = "cookieName=cookieValue; SameSite=Secure";
+
+    let currentRecipeIndex = 0;
+    let recipeInfo = data[currentRecipeIndex]; 
+
+    recipe1name.textContent = recipeInfo.title;
+    recipe1img.src = recipeInfo.image;
+
+    let moredata = recipeInfo.id;
+
+    fetch('https://api.spoonacular.com/recipes/' + moredata + '/information?apiKey=4a7b0e81a4174698a674913026409243')
+      .then(response2 => response2.json())
+      .then(data2 => {
+
+        console.log(data2);
+
+        recipe1link.href = data2.sourceUrl;
+        recipe1time.textContent = data2.readyInMinutes + " minutes";
+        recipe1veg.textContent = data2.vegetarian ? 'Veg' : 'Non-Veg';
+
+    });
+
+    next.addEventListener('click', () => {
+      currentRecipeIndex++;
+      recipeInfo = data[currentRecipeIndex];
+
+      moredata = recipeInfo.id;
 
       recipe1name.textContent = recipeInfo.title;
-      recipe1time.textContent = recipeInfo.readyinMinutes + " minutes";
-      recipe1veg.textContent = recipeInfo.vegan ? 'Vegan' : 'Non-Vegan';
       recipe1img.src = recipeInfo.image;
-      recipe1calories.textContent = recipeInfo.calories.toFixed(2) + " palories";
-      recipe1link.href = getsource(recipeInfo.id);
 
-      console.log(recipeInfo);
-      const recipelink = recipeInfo.calories.toFixed(2);
-      console.log(recipelink);
+      fetch('https://api.spoonacular.com/recipes/' + moredata + '/information?apiKey=4a7b0e81a4174698a674913026409243')
+        .then(response3 => response3.json())
+        .then(data3 => {
 
-      const recipe2Info = data[1];
-
-      recipe2name.textContent = recipe2Info.title;
-      recipe2time.textContent = recipe2Info.readyinMinutes + " minutes";
-      recipe2veg.textContent = recipe2Info.vegan ? 'Vegan' : 'Non-Vegan';
-      recipe2img.src = recipe2Info.image;
-      recipe2calories.textContent = recipe2Info.calories.toFixed(2) + " palories";
-      recipe2link.href = getsource(recipe2Info.id);
-
-      console.log(recipe2Info);
-      const recipe2link = recipe2Info.calories.toFixed(2);
-      console.log(recipe2link);
-
-      const recipe3Info = data[2];
-
-      recipe3name.textContent = recipe3Info.title;
-      recipe3time.textContent = recipe3Info.readyinMinutes + " minutes";
-      recipe3veg.textContent = recipe3Info.vegan ? 'Vegan' : 'Non-Vegan';
-      recipe3img.src = recipe3Info.image;
-      recipe3calories.textContent = recipe3Info.calories.toFixed(2) + " palories";
-      recipe3link.href = getsource(recipe3Info.id);
-
-      console.log(recipe3Info);
-      const recipe3link = recipe3Info.calories.toFixed(2);
-      console.log(recipe3link);
-
-    })
-    .catch(error => {
-      console.error('Error:', error);
+        recipe1link.href = data3.sourceUrl;
+        recipe1time.textContent = data3.readyInMinutes + " minutes";
+        recipe1veg.textContent = data3.vegetarian ? 'Veg' : 'Non-Veg';
+      });
     });
+
+    back.addEventListener('click', () => {
+      currentRecipeIndex--;
+      recipeInfo = data[currentRecipeIndex];
+
+      moredata = recipeInfo.id;
+
+      recipe1name.textContent = recipeInfo.title;
+      recipe1img.src = recipeInfo.image;
+    
+
+      fetch('https://api.spoonacular.com/recipes/' + moredata + '/information?apiKey=4a7b0e81a4174698a674913026409243')
+        .then(response4 => response4.json())
+        .then(data4 => {
+
+        recipe1link.href = data4.sourceUrl;
+        recipe1time.textContent = data4.readyInMinutes + " minutes";
+        recipe1veg.textContent = data4.vegetarian ? 'Veg' : 'Non-Veg';
+      });
+
+    });
+
+    if(recipe1veg.textContent=="Non-Veg"){
+      recipe1veg.style.color = 'red';
+    }
+
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 });
+
 
 
 
